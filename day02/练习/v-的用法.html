@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a {
+            border: 3px red solid;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <span v-show="isShow">{{msg1}}</span><br>
+        <input type="button"value="显示开关" @click="show">
+        <hr>
+        <h3 v-if="false" >if的使用</h3>
+        <h3 v-else-if="true">bbb</h3>
+        <h3 v-else >aaa</h3>
+        <hr>
+        <img :src="src" :title="title" :class="{a: showcss}">
+        <input type="button" value="改变图片的样式" @click="addCss">
+        <input type="button" value="切换图片" @click="changeImg">
+    </div>
+
+    <script src="../js/vue.min.js"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                msg1:"好好学习",
+                isShow:true,
+                num:10,
+                title: "猫",
+                showcss: false,
+                src: "https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2247692397,1189743173&fm=5"
+            },
+            methods:{
+                show(){
+                    this.isShow = !this.isShow
+                },
+                addCss() {
+                    this.showcss = !this.showcss;
+                },
+                changeImg() {
+                    this.src = "https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1569462993,172008204&fm=5"
+                },
+
+            }
+        })
+    </script>
+</body>
+</html>
