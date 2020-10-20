@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app" >
+    {{ msg.toUpperCase() }}<br>
+    {{ msg2%2+'1' }}<br>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"word",
+            msg2:4,
+        }
+    })
+</script>
+</body>
+</html>

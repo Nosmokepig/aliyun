@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="first_vue">
+        {{msg+"777"+user_name}}
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        new Vue({
+            el:"#first_vue",
+            data:{
+                msg:'welcome to learn vue!',
+                user_name:"费翔",
+            },
+        })
+    </script>
+</body>
+</html>

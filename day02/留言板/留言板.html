@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table id="msg_board" style="margin: 0 auto;height: 100%;width: 300px" cellspacing="0px" >
+        <tr width="50px" style="padding-bottom: 50px">
+            <td style="text-align: right;width: 50%">
+<!--                <input type="text"style="width: 50%;height: 50px">-->
+                <textarea name="" id="" cols="30" rows="5" v-model="content"></textarea>
+            </td>
+            <td><input type="button" value="添加留言" @click="add_msg"></td>
+        </tr>
+        <tr v-for="(content,index) in note_list" :key="index" >
+            <td v-if="index%2==0" bgcolor="#f8f8f8">{{ content }}</td>
+            <td v-else bgcolor="white">{{ content }}</td>
+            <td><input style="margin-left: 10px" type="button" value="删除" @click="del_msg(index)"></td>
+        </tr>
+        <tr>
+            <td>留言总数量：{{note_list.length}}条</td>
+            <td v-if="note_list.length==0"></td>
+            <td v-else><input type="button"value="删除所有"v-show="true" @click="del_all_msg"></td>
+        </tr>
+    </table>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:"#msg_board",
+        data: {
+            note_list: [],
+            content: "",
+            del_all_show: false,
+        },
+        methods:{
+            add_msg(){
+                let msg = this.content;
+                if (msg){
+                    this.note_list.unshift(msg);
+                    this.content = "";
+                }
+            },
+            del_msg(index){
+                this.note_list.splice(index,1)
+            },
+            del_all_msg(){
+                this.note_list=[];
+            },
+        }
+
+    })
+
+</script>
+
+</body>
+</html>

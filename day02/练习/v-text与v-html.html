@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <span>{{msg1}}ddddddd</span><br>
+    <span v-text="msg1">dddd</span><br>
+    <span v-html="msg2"></span>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg1:"hello",
+            msg2:"<a href='https://www.baidu.com'>我是a标签</a>",
+        }
+    })
+</script>
+</body>
+</html>

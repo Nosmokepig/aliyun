@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+{{msg1}}<br>
+{{msg2}}<br>
+{{msg3}}<br>
+{{msg4}}<br>
+{{msg5}}<br>
+{{msg6}}<br>
+</div>
+</body>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg1:"hello",
+            msg2:123,
+            msg3:{'tom':18,'jack':20,'alice':21},
+            msg4:['北京','上海','天津','重庆'],
+            msg5:[{'name':'tom','age':18},{'name':'jack','age':20}],
+            msg6:false,
+        }
+    })
+</script>
+</html>
