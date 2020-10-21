@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <input type="text" v-model="username">
+    <br>
+    <span>父组件的值:{{ username }}</span>
+    <hr>
+    <com :test="username"></com>
+
+
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+
+    let com = {
+        template:`
+            <div>
+               这是子组件接受的数据：{{test}}
+            </div>
+        `,
+        props:['test'],
+    }
+
+    new Vue({
+        el: "#app",
+        data: {
+            username:'',
+        },
+        methods: {},
+        components:{
+            'com':com,
+        }
+    })
+</script>
+
+</body>
+</html>

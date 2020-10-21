@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    姓：<input type="text" v-model="familyname">
+    名：<input type="text" v-model="lastname">
+    <span>姓名：{{name}}</span>
+
+    <hr>
+
+    姓名：<input type="text" v-model="fullname">
+    <br>
+    <span>姓：{{fname}}</span>
+    <br>
+    <span>名：{{lname}}</span>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            familyname:"",
+            lastname:"",
+            fullname:"",
+            fname:"",
+            lname:"",
+        },
+        methods: {},
+        computed:{
+            name(){
+                return this.familyname + this.lastname;
+            },
+        },
+        watch:{
+          fullname(){
+                this.fname = this.fullname[0];
+                this.lname = this.fullname.split(this.fullname[0])[1]
+          },
+        },
+    })
+</script>
+
+</body>
+</html>

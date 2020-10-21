@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <com css="red" user="tom">awd </com>
+    <br>
+    <com css="green" user="jack">111</com>
+
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+
+    let com = {
+        template:`
+            <div v-bind:class="css">
+                这是一个带样式的组件
+            </div>
+        `,
+        props:['css','user'],
+        created:function (){
+            console.log(this.user)
+        }
+    }
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        components:{
+            "com":com,
+        }
+    })
+</script>
+
+</body>
+</html>

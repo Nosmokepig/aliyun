@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<span id="num">{{ num }}</span>
+<input type="button"value="点击"@click="dec_num">
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    var num1 = document.getElementById('num')
+    new Vue({
+        el: "#app",
+        data: {
+            num:30,
+        },
+        methods: {
+            dec_num(){
+              this.num--
+            },
+        },
+
+        beforeCreate:function (){
+            console.log('beforecreate:'+this.num)
+            console.log(num1)
+        },
+        created:function (){
+            console.log('created:'+this.num)
+        },
+        beforeMount:function (){
+            console.log("beforeMount:"+ document.getElementById('num').innerText)
+        },
+        mounted(){
+            console.log('mounted:'+num1.innerText)
+            console.log('mounted:'+document.getElementById('num').innerText)
+            console.log(num1.innerText)
+        },
+        beforeUpdate(){
+            console.log("beforeUpdate:" + this.num)
+            console.log("beforeUpdate:" + document.getElementById("num").innerText)
+        },
+        updated() {
+            console.log("updated:" + this.num)
+            console.log("updated:" + document.getElementById("num").innerText)
+        },
+        beforeDestroy(){},
+        destroyed(){},
+
+    })
+</script>
+
+</body>
+</html>

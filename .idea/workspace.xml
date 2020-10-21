@@ -11,7 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ca9b460-f218-4862-bce1-6b5af5261444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/day02/练习/事件.html" beforeDir="false" afterPath="$PROJECT_DIR$/day02/练习/事件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/props属性.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/全局组件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/子传父.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/局部组件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/案例1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/父传子.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/生命周期钩子.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/监听事件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/箭头函数.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/组件中data的使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/组件中的特性’.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day03/计算属性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="template" />
       </list>
     </option>
   </component>
@@ -29,6 +42,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1j8umXNfYaVmSwEn6G0zcdu15Up" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,7 +61,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\上课笔记代码\05 web进阶\练习代码" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603198198343</updated>
       <workItem from="1603198201040" duration="2432000" />
-      <workItem from="1603244428208" duration="3872000" />
+      <workItem from="1603244428208" duration="15055000" />
     </task>
     <servers />
   </component>
@@ -74,5 +96,27 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="340" y="110" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603276387111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="340" y="110" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1603276387111" />
+    <state x="779" y="152" key="RollbackChangesDialog" timestamp="1603276396845">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="779" y="152" key="RollbackChangesDialog/0.0.1536.864@0.0.1536.864" timestamp="1603276396845" />
+    <state x="217" y="111" width="996" height="725" key="SettingsEditor" timestamp="1603277240519">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="217" y="111" width="996" height="725" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603277240519" />
+    <state x="786" y="344" key="git4idea.ui.GitResetDialog" timestamp="1603276338621">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="786" y="344" key="git4idea.ui.GitResetDialog/0.0.1536.864@0.0.1536.864" timestamp="1603276338621" />
+    <state x="520" y="185" key="search.everywhere.popup" timestamp="1603276049773">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="520" y="185" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1603276049773" />
   </component>
 </project>

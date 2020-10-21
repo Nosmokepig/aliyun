@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <span>这是父组件中的username：{{username}}</span>
+    <hr>
+    <com @btn="be_click"></com>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+
+    let com = {
+        template:`
+            <div>
+                这是子组件:
+                <input type="button"value="点击"@click="change">
+            </div>
+        `,
+        methods: {
+            change()
+            {
+                this.$emit('btn','小王')
+            }
+        }
+    }
+
+    new Vue({
+        el: "#app",
+        data: {
+            username:'小明',
+        },
+        methods: {
+            be_click(username){
+                this.username=username;
+            }
+        },
+        components:{
+            'com':com
+        }
+    })
+
+</script>
+
+</body>
+</html>

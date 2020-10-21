@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+
+
+    //普通函数
+    function a1(x,y){
+        console.log(x + y);
+    }
+    a1(1,2)
+    //匿名函数
+    let a2 = function (a,b){
+        console.log(a - b);
+    }
+    a2(3,2)
+
+    //箭头函数多种写法
+    let a3 = (x,y,z) =>{
+        console.log(x + y + z);
+    }
+    a3(1,2,3)
+    let a4 = (x,y) => console.log(x+1)
+    a4(9)
+
+    let a5 = (a,b) => a+b
+
+    let num = a5(11,11)
+    console.log(num);
+
+    //箭头函数的特性
+    let user = {
+        username:'小明',
+        func1(){
+            console.log(this.username);
+        },
+        func2(){
+            console.log(123)
+        },
+    }
+    user.func1()
+    user.func2()
+
+    let student = {
+        username:"小红",
+        func1(){
+            setTimeout(function (){
+                console.log(this.username)
+            })
+        },
+    }
+    student.func1()
+
+    let emp = {
+        username:'小刚',
+        func1(){
+            setTimeout(()=>{
+                console.log(this.username)
+            })
+        },
+    }
+    emp.func1()
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+    })
+
+
+</script>
+
+</body>
+</html>

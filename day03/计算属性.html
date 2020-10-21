@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="value1">
+    <span> + </span>
+    <input type="text" v-model="value2">
+    <span> = </span>
+    <input type="text" v-model="result">
+
+    <br>
+    <br>
+    <hr>
+
+    <input type="text"placeholder="请输入两位数" v-model="num">
+    <span>十位 ：{{ parseInt(num/10) }}</span>
+    <span>个位 ：{{num%10}}</span>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            value1:null,
+            value2:null,
+            num: '',
+        },
+        methods: {},
+        computed:{
+            result(){
+                return +(this.value1) + +(this.value2)
+            }
+
+        },
+    })
+</script>
+
+</body>
+</html>

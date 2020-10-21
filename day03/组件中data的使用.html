@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <com></com>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+
+    let com = {
+        template: `
+            <div>
+                this is a 组件
+                <br>
+                <span @click="change">this is 组件 span,{{username}}</span>
+            </div>
+        `,
+        data: function () {
+            return{
+                username:'小明',
+            }
+        },
+        methods:{
+          change(){
+              console.log(this.username)
+          }
+        },
+    }
+    Vue.component('com',com)
+
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+    })
+</script>
+
+</body>
+</html>

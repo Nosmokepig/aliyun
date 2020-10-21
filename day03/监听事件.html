@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="num">
+    <br>
+    <span>十位：{{value1}}</span>
+    <span>个位：{{value2}}</span>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            num:"",
+            value1: '',
+            value2: '',
+        },
+        methods: {},
+        watch:{
+            num(){
+                this.value1 = parseInt(this.num/10);
+                this.value2 = this.num%10
+            },
+        },
+    })
+</script>
+
+</body>
+</html>
