@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <router-view></router-view>
+</div>
+<script src="../js/vue.min.js"></script>
+<script src="../js/vue-router.js"></script>
+<script>
+
+    let first = {
+        template:`
+            <div>
+                这是组件一
+                <input type="button"value="用户页面"@click="go2">
+            </div>
+        `,
+        methods: {
+            go2(){
+                this.$router.push({path:'/second/1/tom'})
+            }
+        }
+    }
+
+    let second = {
+        template: `
+            <div>
+                这是组件2
+                <br>
+                组件1传递的参数id为：{{$route.params.id}}
+                <br>
+                组件1传递的参数name为：{{$route.params.name}}
+                <br>
+                <input type="button" value="返回上一页"@click="goback">
+            </div>
+        `,
+        methods:{
+            goback(){
+                this.$router.go(-1)
+            }
+        }
+
+    }
+
+    let myRouter = new VueRouter({
+        routes:[
+            {path:'/first',component:first},
+            {path: '/second/:id/:name',component:second},
+            {path:'/',redirect:'/first'},
+        ]
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        router:myRouter
+    })
+</script>
+
+</body>
+</html>

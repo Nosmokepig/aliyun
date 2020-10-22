@@ -5,16 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-
 <div id="app">
-    <h1>这是主页头</h1>
-    <hr>
-    <router-link to="/second">访问学生页面</router-link>
-    <router-link to="/first">访问教师页面</router-link>
     <router-view></router-view>
-
 </div>
-
 <script src="../js/vue.min.js"></script>
 <script src="../js/vue-router.js"></script>
 <script>
@@ -22,35 +15,36 @@
     let first = {
         template:`
             <div>
-                教师管理系统
+                这是组件1
+                <router-link to="/second?id=1&name=tom">跳转到组件2并传递参数</router-link>
             </div>
         `,
-    }
 
+    }
     let second = {
-        template: `
+        template:`
             <div>
-                学生管理系统
+                这是组件2；组件一传递过来的参数id是：{{$route.query.id}}
+                <br>
+                组件1传递过来的参数name是：{{ $route.query.name }}
             </div>
         `,
     }
     let myRouter = new VueRouter({
-
         routes:[
             {path:'/first',component:first},
             {path:'/second',component:second},
-            {path:'/',component:first}
+            {path:'/',redirect:'/first'},
 
         ]
 
     })
 
-
     new Vue({
         el: "#app",
         data: {},
         methods: {},
-        router:myRouter
+        router:myRouter,
     })
 </script>
 
