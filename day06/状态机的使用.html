@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <First></First>
+    <Second></Second>
+</div>
+<script src="../js/vue.min.js"></script>
+<script src="../js/vue-router.js"></script>
+<script src="../js/vuex.3.0.1.js"></script>
+<script>
+
+    let First = {
+        template:`
+            <div>
+                这是第一个组件
+                <input type="button"value="增加"@click="add">
+            </div>
+        `,
+        methods: {
+            add(){
+                this.$store.commit('num_add')
+            },
+        },
+    }
+
+    let Second = {
+        template: `
+            <div>
+                这是第二个组件
+                点击按钮，组件2中的数字发生变化->{{$store.state.number}}
+            </div>
+        `,
+    }
+
+    let myStore = new Vuex.Store({
+        state:{
+            number:1,
+        },
+        mutations:{
+            num_add(state){
+                if (state.number < 8){
+                    state.number++
+                }
+            },
+        },
+
+
+    })
+
+
+    new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+        components:{
+            First:First,
+            Second:Second,
+        },
+        store:myStore,
+    })
+</script>
+
+</body>
+</html>

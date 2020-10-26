@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <First></First>
+    <Second></Second>
+</div>
+<script src="../js/vue.min.js"></script>
+<script src="../js/vue-router.js"></script>
+<script src="../js/vuex.3.0.1.js"></script>
+<script>
+
+    let First = {
+        template: `
+          <div>
+          这是第一个组件
+          <input type="button" value="点我" @click="clicked">
+          </div>
+        `,
+        methods: {
+            clicked() {
+                this.$store.commit('change', {name: 'Jack', age: 20})
+            },
+        },
+    }
+
+
+    let Second = {
+        template: `
+            <div>
+                这是第二个组件,传递的参数为{{$store.state.user}}
+            </div>
+        `,
+    }
+
+
+    let myStore = new Vuex.Store({
+        state: {
+            user: {
+                name: 'Tom',
+                age: 18,
+            },
+        },
+        mutations: {
+            change(store, user) {
+                console.log(user)
+                store.user.name = user.name
+                store.user.age = user.age
+            },
+
+        },
+    })
+
+    new Vue({
+        el: "#app",
+        data: {},
+        components: {
+            First: First,
+            Second: Second,
+        },
+        store: myStore,
+    })
+</script>
+
+</body>
+</html>

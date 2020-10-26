@@ -11,19 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ca9b460-f218-4862-bce1-6b5af5261444" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day03/props属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/全局组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/子传父.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/局部组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/案例1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/父传子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/生命周期钩子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/监听事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/箭头函数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/组件中data的使用.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/组件中的特性’.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day03/计算属性.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day06/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day06/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day06/getters的使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day06/状态机的使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/vuex.3.0.1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day01/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/day01/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="template" />
       </list>
@@ -53,7 +50,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,6 +63,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\上课笔记代码\05 web进阶\练习代码\js" />
       <recent name="F:\上课笔记代码\05 web进阶\练习代码" />
     </key>
   </component>
@@ -78,7 +76,15 @@
       <option name="presentableId" value="Default" />
       <updated>1603198198343</updated>
       <workItem from="1603198201040" duration="2432000" />
-      <workItem from="1603244428208" duration="15055000" />
+      <workItem from="1603244428208" duration="16338000" />
+      <workItem from="1603364574182" duration="6338000" />
+      <workItem from="1603422688403" duration="262000" />
+      <workItem from="1603424684760" duration="641000" />
+      <workItem from="1603588755507" duration="2072000" />
+      <workItem from="1603590849593" duration="1762000" />
+      <workItem from="1603595080188" duration="7688000" />
+      <workItem from="1603677503794" duration="3043000" />
+      <workItem from="1603710758460" duration="2698000" />
     </task>
     <servers />
   </component>
@@ -106,17 +112,17 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="779" y="152" key="RollbackChangesDialog/0.0.1536.864@0.0.1536.864" timestamp="1603276396845" />
-    <state x="217" y="111" width="996" height="725" key="SettingsEditor" timestamp="1603277240519">
+    <state x="21" y="112" width="996" height="725" key="SettingsEditor" timestamp="1603366976461">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="217" y="111" width="996" height="725" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603277240519" />
+    <state x="21" y="112" width="996" height="725" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603366976461" />
     <state x="786" y="344" key="git4idea.ui.GitResetDialog" timestamp="1603276338621">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="786" y="344" key="git4idea.ui.GitResetDialog/0.0.1536.864@0.0.1536.864" timestamp="1603276338621" />
-    <state x="520" y="185" key="search.everywhere.popup" timestamp="1603276049773">
+    <state x="521" y="186" width="672" height="678" key="search.everywhere.popup" timestamp="1603369891458">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="520" y="185" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1603276049773" />
+    <state x="521" y="186" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1603369891458" />
   </component>
 </project>

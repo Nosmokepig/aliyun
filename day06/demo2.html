@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <First></First>
+    <Second></Second>
+</div>
+<script src="../js/vue.min.js"></script>
+<script src="../js/vue-router.js"></script>
+<script src="../js/vuex.3.0.1.js"></script>
+<script>
+
+
+    let First = {
+        template: `
+
+          <div>
+          这是第一个组件
+          <input type="button" value="点我" @click="add">
+          </div>
+        `,
+        methods: {
+            add() {
+                this.$store.commit('add_data', 10)
+            },
+        }
+    }
+
+    let Second = {
+        template: `
+            <div>
+                这是第二个组件 -> {{$store.getters.res}}
+                <br>
+                {{$store.state.num_list}}
+            </div>
+        `,
+    }
+
+    let myStore = new Vuex.Store({
+        state: {
+            num_list: [4, 6]
+        },
+        mutations: {
+            add_data(state, num) {
+                state.num_list.push(num)
+            },
+        },
+        getters: {
+            res(state) {
+                let sum = 0
+                for (let n of state.num_list){
+                    sum += n
+                }
+                return sum
+            },
+        }
+    })
+
+
+    new Vue({
+        el: "#app",
+        data: {},
+        components: {
+            First: First,
+            Second: Second,
+        },
+        store: myStore,
+    })
+</script>
+
+</body>
+</html>

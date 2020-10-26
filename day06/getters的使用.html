@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <First></First>
+    <Second></Second>
+</div>
+<script src="../js/vue.min.js"></script>
+<script src="../js/vue-router.js"></script>
+<script src="../js/vuex.3.0.1.js"></script>
+<script>
+
+    let First = {
+        template:`
+            <div>
+                这是第一个组件
+                <input type="button"value="点击"@click="add">
+            </div>
+        `,
+        methods: {
+            add() {
+                this.$store.commit('add_count')
+            }
+        },
+    }
+
+    let Second = {
+        template: `
+            <div>
+                这是第二个组件 -> {{$store.state.count}}
+                <br>
+                获取count 的相反数{{$store.getters.change_count}}
+            </div>
+        `,
+    }
+
+
+    let myStore = new Vuex.Store({
+        state:{
+            count:1,
+        },
+        mutations:{
+            add_count(state){
+                state.count++
+            },
+        },
+        getters:{
+            change_count(state){
+                return 0- state.count
+            },
+        },
+    })
+    new Vue({
+        el: "#app",
+        data: {},
+        components:{
+            First:First,
+            Second:Second,
+        },
+        store:myStore,
+    })
+</script>
+
+</body>
+</html>
